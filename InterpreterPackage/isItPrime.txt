@@ -1,0 +1,46 @@
+# a program which finds if a number is prime or not
+
+define IsPrime number :
+
+   clear isPrime
+   isPrime = 1
+
+   clear testDivision
+   clear divider
+   divider = 2
+
+   clear maxDivider
+   maxDivider = number / 2
+
+
+   # checking whether the number is prime
+   while divider not maxDivider do:
+      testDivision = number % divider
+
+      if testDivision is 0 do :
+         isPrime = 0
+         divider = maxDivider - 1
+      end
+
+      incr divider
+   end
+
+   if number is 2 do :
+      isPrime = 1
+   end
+
+   if number is 3 do :
+      isPrime = 1
+   end
+
+   if number is 4 do :
+      isPrime = 0
+   end
+
+   return isPrime
+end
+
+clear numberToTest
+numberToTest = 123311
+clear testPrime
+testPrime = IsPrime numberToTest

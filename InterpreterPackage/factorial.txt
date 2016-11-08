@@ -1,0 +1,16 @@
+# initialize the number we want the factorial of
+clear number
+number = 12
+
+# initialize the result
+clear result
+result = 1
+
+# finding the factorial
+while number not 1 do :
+   result = result * number
+   decr number
+end
+
+# be careful, Bare Python only supports integer numbers from -2,147,483,648 to 2,147,483,648
+# this means that the program will give wrong results for the factorial of any number greater then 12 because 13! = 6227020800
